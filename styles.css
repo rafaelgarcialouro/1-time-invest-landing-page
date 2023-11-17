@@ -16,7 +16,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #f2f2f2;
+  background-color: #FFD028;
 }
 
 .logo img {
@@ -45,6 +45,7 @@ nav ul li a {
   height: 38px;
   flex-shrink: 0;
   padding: 10px 20px;
+  background-color: transparent;
   color: #111;
   text-align: center;
   font-family: NATS;
