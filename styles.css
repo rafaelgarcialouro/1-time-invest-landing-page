@@ -79,22 +79,19 @@ section#sobre {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.49) 0%, rgba(0, 0, 0, 0.49) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
   background-image: url("assets/sobre_background_img.png");
   background-position: center;
-  height: 430px;
+  min-height: 430px;
 
-  position: relative;
+  display: flex;
+  flex-direction: row;
 }
 
 section#sobre p {
   border-left: #FFD028;
   border-left-style: solid;
   border-left-width: 4px;
-  position: absolute;
-  top: 50%;
-  left: 55%;
-  transform: translate(0, -50%);
 
   padding: 63px 0 63px 36px;
-  width: 550px;
+  /* width: 550px; */
   height: 234px;
   text-align: left;
 
@@ -103,6 +100,11 @@ section#sobre p {
   font-style: italic;
   font-weight: 600;
   line-height: normal;
+}
+
+div#empty-div {
+  min-width: 55%;
+  height: 0;
 }
 
 section#diferencial {
@@ -198,19 +200,23 @@ section#assessoria li {
 }
 
 section#atendimento {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.53) 0%, rgba(0, 0, 0, 0.53) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
-  background-image: url("assets/sobre_atendimento_img.jpeg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.53) 0%, rgba(0, 0, 0, 0.53) 100%), url("assets/sobre_atendimento_img.jpeg"), lightgray 50% / cover no-repeat;
   background-position: center;
   height: 430px;
+  width: 100%;
 
   position: relative;
 }
 
-/* ... (previous styles) */
+
+#atendimento h2 {
+  font-size: 24px;
+}
 
 footer {
-  background-color: #333;
+  background-color: #111111;
   color: #fff;
+  font-family: Urbanist;
   text-align: center;
   padding: 20px 0;
 }
@@ -219,7 +225,28 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
+
+#footer-box {
+  position: relative;
+}
+
+#borderBottom {
+  border-bottom: 2px solid #fff;
+  position: absolute;
+  width: 60%;
+  top: 100%;
+  bottom: 0;
+}
+
+/* .circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+} */
 
 .logo img {
   max-width: 150px;
@@ -255,7 +282,7 @@ footer {
 }
 
 .contact-button:hover {
-  background-color: #111111;
+  background-color: #111;
   color: #FFD028;
 }
 
