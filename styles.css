@@ -76,13 +76,13 @@ b {
 }
 
 section#sobre {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.49) 0%, rgba(0, 0, 0, 0.49) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
-  background-image: url("assets/sobre_background_img.png");
-  background-position: center;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.49) 0%, rgba(0, 0, 0, 0.49) 100%), url("assets/sobre_atendimento_img2.jpeg"), lightgray 50% / cover no-repeat;
+  background-position: 70%;
   min-height: 430px;
 
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 section#sobre p {
