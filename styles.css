@@ -13,7 +13,6 @@ html {
 body {
   font-family: Urbanist;
   color: #fff;
-  line-height: 1.6;
   background: #111;
 }
 
@@ -27,7 +26,12 @@ header {
   background-color: #FFD028;
 }
 
-.logo img {
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
   max-width: 150px;
 }
 
@@ -95,8 +99,7 @@ section#sobre p {
   border-left-width: 4px;
 
   padding: 63px 0 63px 36px;
-  /* width: 550px; */
-  height: 234px;
+  height: 50%;
   text-align: left;
 
   color: #FFD028;
@@ -116,17 +119,21 @@ section#diferencial {
   flex-direction: row;
   font-size: 16px;
   justify-content: space-between;
-  align-items: center;
 }
 
 section#diferencial div {
   max-width: 500px;
 }
 
+.text-diferencial {
+  text-align: justify;
+  margin-right: 12px;
+}
+
 section#diferencial img {
   border-radius: 40px 40px 0 0;
   width: 100%;
-  height: 330px;
+  max-height: 80%;
 }
 
 section#qualidades {
@@ -139,6 +146,7 @@ section#qualidades {
 
 section#qualidades div {
   height: 100%;
+  width: 1080px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -146,9 +154,12 @@ section#qualidades div {
 
 section#qualidades ul {
   height: 100%;
-
+  width: 100%;
+  margin: 40px 0 40px 0;
+  line-height: 1;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 section#qualidades li {
@@ -156,15 +167,25 @@ section#qualidades li {
   color: #000;
   list-style: none;
   text-align: center;
-  padding: 0 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
 }
 
+section#qualidades .numeros li {
+  justify-content: center;
+}
+
+section#qualidades .selos li {
+  justify-content: space-between;
+}
+
+.largura-item {
+  max-width: 180px;
+}
+
 section#qualidades img {
-  max-width: 235px;
+  max-width: 100%;
 }
 
 section#assessoria {
@@ -205,6 +226,10 @@ section#assessoria li {
   justify-content: space-between;
 }
 
+.assessoria-desc-container button {
+  margin-top: 20px;
+}
+
 .assessoria-img-container {
   width: 69px;
   height: 69px;
@@ -234,8 +259,7 @@ section#assessoria li {
 }
 
 .content-section {
-  padding: 0 305px;
-  margin-bottom: 40px;
+  padding: 26px 16%;
 }
 
 .assessoria-desc {
@@ -246,14 +270,20 @@ section#assessoria li {
   min-width: 230px;
 }
 
+.assess-item-parent {
+  --margin-based-on-height: 0.2;
+}
+
 .assess-item {
-  margin-right: 70px;
+  margin-right: calc(var(--margin-based-on-height) * 70%);
 }
 
 section#atendimento {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.53) 0%, rgba(0, 0, 0, 0.53) 100%), url("assets/sobre_atendimento_img.jpeg"), lightgray 50% / cover no-repeat;
-  height: 430px;
+  min-height: 430px;
   width: 100%;
+
+  padding: 26px 24%;
 
   display: flex;
   flex-direction: column;
@@ -262,14 +292,53 @@ section#atendimento {
   position: relative;
 }
 
+#atendimento h3 span {
+  color: #FFD028;
+  font-style: italic;
+}
 
-#atendimento h2 {
+.descricao-pessoa {
+  font-size: 20px;
+  margin: 0 0 25px 57px;
+}
+
+
+.atendimento-titulo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 41px;
+}
+
+.pessoa-container {
+  width: fit-content;
+  margin: 6px 0 16px 122px;
   font-size: 24px;
 }
 
-#atendimento span {
-  color: #FFD028;
-  font-style: italic;
+.number-line {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.number-line div {
+  height: 0%;
+  width: 95%;
+  border: 2px solid #FFC700;
+}
+
+.number-line h2 {
+  font-size: 30px;
+  height: 57px;
+  width: 57px;
+  border-radius: 100%;
+  background-color: #FFC700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 footer {
@@ -279,7 +348,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 305px;
+  padding: 25px 16% 0;
 }
 
 .footer-content {
@@ -291,7 +360,7 @@ footer {
 }
 
 .footer-text {
-  text-align: justify;
+  text-align: center;
   width: 100%;
   margin-bottom: 20px;
 }
@@ -316,12 +385,13 @@ footer {
   background-color: #fff;
 } */
 
-.logo img {
+footer .logo img {
+  margin: 25px 0 58px;
   max-width: 150px;
 }
 
 .social-links {
-  margin-top: 10px;
+  margin: 10px 0 20px;
 }
 
 .social-icon {
@@ -367,6 +437,14 @@ footer {
   border: solid 2px #FFD028;
 }
 
+.hide-desk {
+  display: none;
+}
+
+.legenda-container {
+  margin: 10px 0;
+}
+
 @font-face {
   font-family: 'Urbanist';
   src: url('assets/fonts/Urbanist-VariableFont_wght.ttf') format('truetype');
@@ -375,4 +453,155 @@ footer {
 @font-face {
   font-family: 'NATS';
   src: url('assets/fonts/NATS-Regular.woff') format('truetype');
+}
+
+@media only screen and (max-width: 1150px) {
+  section#diferencial {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-diferencial {
+    margin-right: 0;
+    margin-bottom: 5%;
+  }
+
+  section#assessoria {
+    flex-direction: column;
+  }
+
+  section#assessoria ul {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  section#assessoria li {
+    margin-bottom: 20px;
+  }
+
+  .assessoria-desc-container {
+    width: 100%;
+  }
+
+  .assessoria-desc-container button {
+    margin: 24px 0;
+  }
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 767px) {
+  header {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 24px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 20px 0;
+  }
+
+  nav ul li {
+    margin-right: 0;
+  }
+
+  .content-section {
+    padding: 5% 5%;
+  }
+
+  #empty-div {
+    display: none;
+  }
+
+  section#sobre {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  section#sobre p {
+    border-left: none;
+    text-align: center;
+    padding: 0 5%;
+  }
+
+  section#diferencial {
+    font-size: 20px;
+
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-diferencial {
+    text-align: center;
+    margin-bottom: 5%;
+  }
+
+  section#qualidades ul {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  section#qualidades li p {
+    margin-top: 12px;
+  }
+
+  .largura-item {
+    max-width: 200px;
+    margin: 24px 0;
+  }
+
+  section#assessoria {
+    flex-direction: column;
+  }
+
+  section#assessoria ul {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  section#assessoria li {
+    margin-bottom: 20px;
+  }
+
+  .assessoria-desc-container {
+    width: 100%;
+  }
+
+  .assessoria-desc-container button {
+    margin: 24px 0;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .hide-desk {
+    display: inline;
+    padding-right: 12px;
+  }
+
+  .number-line div {
+    min-width: 70%;
+    max-width: 73%;
+  }
+
+  .atendimento-titulo-container {
+    text-align: center;
+  }
+
+  .atendimento-titulo-container h2 {
+    margin-bottom: 12px;
+  }
+
+  .pessoa-container {
+    margin: 12px 0;
+  }
+
+  .descricao-pessoa {
+    margin: 0 0 25px;
+  }
 }

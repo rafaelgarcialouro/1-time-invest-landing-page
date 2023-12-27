@@ -7,7 +7,6 @@
   <title>1 Time Invest</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="/assets/favicon-32.jpeg" type="image/jpeg" sizes="32x32">
-  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 </head>
@@ -36,7 +35,7 @@
     </section>
 
     <section id="diferencial" class="content-section">
-      <div>
+      <div class="text-diferencial">
         <p>A <b>1 Time Invest</b> é uma empresa de investimentos que nasceu de uma escola de educação financeira, e
           quando o assunto é investimentos, o brasileiro sempre foi carente de boas informações e de um atendimento de
           qualidade.</p>
@@ -58,13 +57,17 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img src="assets/alphaville.jpeg" alt="ALPHAVILLE">
-              <p>Alameda Madeira 258 - Oitavo Andar, sala 808</p>
-              <p>ALPHAVILLE</p>
+              <div class="legenda-container">
+                <p>Alameda Madeira 258 - Oitavo Andar, sala 808</p>
+                <p>ALPHAVILLE</p>
+              </div>
             </div>
             <div class="swiper-slide">
-              <img src="assets/higienopolis.jpeg" alt="HIGIENÓPOLIS">
-              <p>Rua Teixeira da Silva 660 - Décimo Terceiro Andar</p>
-              <p>HIGIENÓPOLIS</p>
+              <img src="assets/paraiso.jpeg" alt="PARAÍSO">
+              <div class="legenda-container">
+                <p>Rua Teixeira da Silva 660 - Décimo Terceiro Andar</p>
+                <p>PARAÍSO</p>
+              </div>
             </div>
           </div>
           <div class="swiper-pagination"></div>
@@ -72,25 +75,39 @@
     </section>
     <section id="qualidades" class="content-section">
       <div>
-        <ul>
-          <li>
-            <h1>7 ANOS</h1> Ajudando a construir histórias
+        <ul class="numeros">
+          <li class="largura-item">
+            <h1>
+              <span id="animation-anos" style="font-size: 114px;"
+                onclick="incEltNbr('animation-anos', 50, 1, 7)">0</span>
+              <span style="font-size: 64px;">ANOS</span>
+            </h1>
+            <p style="font-size: 20px;">Ajudando a construir histórias</p>
           </li>
-          <li>
-            <h1>+2000 MIL</h1> Clientes que crescem conosco
+          <li class="largura-item">
+            <h1 style="font-size: 64px;">
+              +<span id="animation-clientes" onclick="incEltNbr('animation-clientes', 30, 100, 2000)">0
+              </span><br>MIL
+            </h1>
+            <p style="font-size: 20px;">Clientes que crescem conosco</p>
           </li>
-          <li>
-            <h1>EXCELÊNCIA NPS 88</h1>
+          <li class="largura-item">
+            <h1>
+              <span style="font-size: 29px;">EXCELÊNCIA</span>
+              <span style="font-size: 96px;">NPS</span>
+              <span id="animation-nps" onclick="incEltNbr('animation-nps', 70, 11, 88)"
+                style="font-size: 140px;">0</span>
+            </h1>
           </li>
         </ul>
-        <ul>
-          <li>
+        <ul class="selos">
+          <li class="largura-item">
             <img src="assets/selo.svg" alt="Selo de governança e integridade">
-            <p>Selo de governança e integridade</p>
+            <p style="font-size: 20px;">Selo de governança e integridade</p>
           </li>
-          <li>
+          <li style="width: 220px;">
             <img src="assets/brazil_advisor_awards.svg" alt="Brazil advisor awards">
-            <p>Premiado como um dos melhores escritórios em eficiência operacional</p>
+            <p style="font-size: 20px;">Premiado como um dos melhores escritórios em eficiência operacional</p>
           </li>
         </ul>
       </div>
@@ -102,42 +119,48 @@
         <button class="cta-button regular-button">ABRA SUA CONTA</button>
       </div>
       <ul>
-        <li>
+        <li class="assess-item-parent">
           <div class="assessoria-img-container assess-item">
             <img src="assets/digital_digital_plus.jpeg" alt="DIGITAL">
           </div>
-          <div class="assess-item">
+          <div class="assess-item hide-mobile">
             <p class="nome-plano">DIGITAL</p>
             <p>Até &#82;&#36;100mil</p>
           </div>
-          <div class="assess-item">
+
+          <div class="hide-desk">
+            <p class="nome-plano">DIGITAL</p>
+            <p>Até &#82;&#36;100mil</p>
+          </div>
+
+          <div>
             <p class="nome-plano">DIGITAL+</p>
             <p>&#82;&#36;100mil - &#82;&#36;300mil</p>
           </div>
         </li>
-        <li>
+        <li class="assess-item-parent">
           <div class="assessoria-img-container assess-item">
             <img src="assets/one_plus.jpeg" alt="ONE PLUS">
           </div>
-          <div class="assess-item">
+          <div>
             <p class="nome-plano">ONE PLUS</p>
             <p>&#82;&#36;300mil - &#82;&#36;1 milhão</p>
           </div>
         </li>
-        <li>
+        <li class="assess-item-parent">
           <div class="assessoria-img-container assess-item">
             <img src="assets/one_unique.jpeg" alt="ONE UNIQUE<">
           </div>
-          <div class="assess-item">
+          <div>
             <p class="nome-plano">ONE UNIQUE</p>
             <p>&#82;&#36;1 milhão - &#82;&#36;5 milhões</p>
           </div>
         </li>
-        <li>
+        <li class="assess-item-parent">
           <div class="assessoria-img-container assess-item">
             <img src="assets/one_private.jpeg" alt="ONE PRIVATE">
           </div>
-          <div class="assess-item">
+          <div>
             <p class="nome-plano">ONE PRIVATE</p>
             <p>Acima de &#82;&#36;5 milhões</p>
           </div>
@@ -146,7 +169,7 @@
     </section>
 
     <section id="atendimento" class="content-section">
-      <div>
+      <div class="atendimento-titulo-container">
         <h2>
           <span>
             ATENDIMENTO PERSONALIZADO
@@ -160,46 +183,37 @@
           cliente
         </p>
       </div>
+      <div class="number-line">
+        <h2>1</h2>
+        <div></div>
+      </div>
       <div>
-        <h3>
+        <h3 class="pessoa-container">
           <span>#Pessoa Física<br></span>
           Focados em pessoas e famílias
         </h3>
-        <p>
+        <p class="descricao-pessoa">
           Atendimento personalizado, focado em pessoas e famílias, buscando entender seu momento de vida,projetos e
           objetivos. Baseado nessas informações e a capacidade de poupar, montamos uma carteira de investimentos
           personalizada para cada cliente.
         </p>
       </div>
+      <div class="number-line">
+        <h2>2</h2>
+        <div></div>
+      </div>
       <div>
-        <h3>
+        <h3 class="pessoa-container">
           <span>#Pessoa Jurídica<br></span>
           Seu negócio tem nosso foco também
         </h3>
-        <p>
+        <p class="descricao-pessoa">
           Na 1 Time temos todo um sistema voltado para soluções corporativas, te ajudando a crescer e desenvolver o seu
           empreendimento. Todas as soluções desse mercado são conduzidas por um time dedicado e experiente, para sua
           empresa ter os melhores resultados.
         </p>
       </div>
     </section>
-
-    <!-- <section id="equipe" class="content-section">
-      <h2>
-        <span>
-          ASSESSORES CONSTANTEMENTE
-        </span>
-        <span style="color: #FFD028;">
-          CAPACITADOS
-        </span>
-      </h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-    </section>
-
-    <section id="trabalhe" class="content-section">
-      <h2>TRABALHE CONOSCO</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-    </section> -->
   </main>
 
   <footer>
@@ -207,7 +221,7 @@
       <div class="logo">
         <img src="assets/logo_one_time_rgb.png" alt="One time invest">
       </div>
-      <p style="font-weight: 600;">
+      <p style="font-weight: 600; margin-bottom: 19px;">
         <span style="color: #FFD028; font-style: italic;">
           Nos acompanhe
         </span>
