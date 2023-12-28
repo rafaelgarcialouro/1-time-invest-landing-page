@@ -1,4 +1,13 @@
 {
+  function toggleNavMenu() {
+    var x = document.getElementById("navBar");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+
   const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
