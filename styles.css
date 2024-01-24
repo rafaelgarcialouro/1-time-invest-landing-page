@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 * {
@@ -14,6 +15,8 @@ body {
   font-family: Urbanist;
   color: #fff;
   background: #111;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 header {
