@@ -564,8 +564,15 @@ footer .logo img {
   }
 
   section#sobre {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.49) 0%, rgba(0, 0, 0, 0.49) 100%), url("assets/sobre_atendimento_img2.jpeg"), lightgray 50% / cover no-repeat;
+    background-position: 50%;
+
     flex-direction: column;
     justify-content: center;
+  }
+
+  #bgVideo {
+    display: none;
   }
 
   section#sobre p {
