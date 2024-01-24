@@ -26,6 +26,15 @@ header {
   background-color: #FFD028;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a button {
+  cursor: pointer;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -79,6 +88,7 @@ header .icon {
   background-color: #FFD028;
   border-color: #111111;
   color: #111111;
+  width: 100%;
 }
 
 .regular-button:hover {
@@ -88,8 +98,7 @@ header .icon {
 }
 
 section#sobre {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.49) 0%, rgba(0, 0, 0, 0.49) 100%), url("assets/sobre_atendimento_img2.jpeg"), lightgray 50% / cover no-repeat;
-  background-position: 70%;
+  position: relative;
   min-height: 430px;
 
   display: flex;
@@ -449,6 +458,15 @@ footer .logo img {
   margin: 10px 0;
 }
 
+#bgVideo {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.49;
+  left: 0;
+}
+
 @font-face {
   font-family: 'Urbanist';
   src: url('assets/fonts/Urbanist-VariableFont_wght.ttf') format('truetype');
@@ -468,6 +486,10 @@ footer .logo img {
   .text-diferencial {
     margin-right: 0;
     margin-bottom: 5%;
+  }
+
+  #bgVideo {
+    width: unset;
   }
 
   section#assessoria {
@@ -628,5 +650,13 @@ footer .logo img {
 
   .descricao-pessoa {
     margin: 0 0 25px;
+  }
+
+  section#diferencial img {
+    height: 60%;
+  }
+
+  .escritorios {
+    max-width: 100% !important;
   }
 }
