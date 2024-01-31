@@ -231,6 +231,7 @@ section#assessoria ul {
 
 section#assessoria li {
   display: flex;
+  align-items: center;
   margin-bottom: 10px;
   width: 100%;
 }
@@ -509,7 +510,6 @@ footer .logo img {
 
   section#assessoria li {
     margin-bottom: 20px;
-    align-items: center;
   }
 
   .assessoria-desc-container {
