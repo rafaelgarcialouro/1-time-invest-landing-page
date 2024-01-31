@@ -296,6 +296,8 @@ section#assessoria li {
 
 section#atendimento {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.53) 0%, rgba(0, 0, 0, 0.53) 100%), url("assets/sobre_atendimento_img.jpeg"), lightgray 50% / cover no-repeat;
+  background-attachment: fixed;  
+  box-shadow: inset -5px -5px 5px 0px #0000008f;
   min-height: 430px;
   width: 100%;
 
@@ -379,6 +381,7 @@ footer {
   text-align: center;
   width: 100%;
   margin-bottom: 20px;
+  word-wrap: break-word;
 }
 
 #footer-box {
@@ -506,6 +509,7 @@ footer .logo img {
 
   section#assessoria li {
     margin-bottom: 20px;
+    align-items: center;
   }
 
   .assessoria-desc-container {
